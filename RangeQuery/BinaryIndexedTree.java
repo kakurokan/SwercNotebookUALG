@@ -1,6 +1,5 @@
 /**
  * Binary Indexed Tree (Fenwick Tree)
- * Baseada no Capítulo 9.2 do livro.
  * * Suporta: Point Update (soma) e Range Sum Query.
  * * Indexação: 1-based (Internamente). O código lida com arrays 0-based se necessário.
  */
@@ -35,7 +34,7 @@ public static class BIT {
 
     /**
      * Retorna a soma do prefixo [0...i].
-     * Referência: "Processing a range sum query" [cite: 2336-2343]
+     * Referência: "Processing a range sum query"
      * Lógica: Descemos na árvore subtraindo o LSB.
      */
     public long prefixSum(int i) {
@@ -53,7 +52,6 @@ public static class BIT {
     /**
      * Retorna a soma do intervalo [l, r].
      * Baseado na fórmula clássica de soma de prefixos: sum(r) - sum(l-1).
-     * Referência: [cite: 2324]
      */
     public long query(int l, int r) {
         if (l > r) return 0;
