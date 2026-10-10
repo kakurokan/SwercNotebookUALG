@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 vector<vector<long long>> graph;
+//graph[i][i] deve ser igual a 0 
 void Warshall(int n)
 {
     for (int k = 0; k < n; k++)
@@ -16,4 +17,5 @@ void Warshall(int n)
             }
         }
     }
+    
 }
