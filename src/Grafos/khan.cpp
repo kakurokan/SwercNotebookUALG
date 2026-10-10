@@ -4,6 +4,7 @@ using namespace std;
 vector<int> order;
 vector<vector<int>> graph;
 
+
 void topoSortKhan()
 {
     int n = graph.size()-1;
