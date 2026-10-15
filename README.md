@@ -1,109 +1,70 @@
 # SwercNotebookUALG
 
-Notebook da equipe UALGException, reunindo implementações de algoritmos, estruturas de dados e técnicas frequentes em programação competitiva e resolução de problemas.
+Notebook of the UALGException team.
 
-## Sobre o projeto
+This repository contains examples, algorithms, and data structures in C++ for studying, quick consultation, and use in programming contests and algorithm challenges.
 
-Este repositório serve como uma coleção de referências rápidas para:
+## About the project
 
-- algoritmos de grafos;
-- estruturas de dados clássicas;
-- programação dinâmica;
-- técnicas de sliding window e range query;
-- utilitários matemáticos;
-- soluções básicas em Java e C++.
+The goal of this project is to centralize useful and classic implementations of:
 
-O objetivo é centralizar exemplos prontos para consulta, estudo e reutilização durante competições e desafios de algoritmos.
+- graphs;
+- dynamic programming;
+- data structures;
+- range queries;
+- sliding window techniques;
+- mathematics and utilities;
+- common competitive programming strategies.
 
-## Estrutura do repositório
+## Repository structure
 
 ```text
 .
 ├── .vscode/
 │   └── c_cpp_properties.json
 ├── src/
-│   ├── Básicos/
-│   │   ├── CheckTimes.java
-│   │   ├── Occorrences.java
-│   │   ├── TransporMatriz.java
-│   │   ├── TwoSum.java
-│   │   └── Unique.java
-│   │
-│   ├── Grafos/
-│   │   ├── BFS.cpp
-│   │   ├── Bellman_Ford.cpp
-│   │   ├── BinaryLifting.cpp
-│   │   ├── DFS.cpp
-│   │   ├── DFS_ciclos.cpp
-│   │   ├── Dijkstra.cpp
-│   │   ├── Disjointset.cpp
-│   │   ├── Edmonds-Karp.cpp
-│   │   ├── Floyd-Warshall.java
-│   │   ├── Hierholzer.java
-│   │   ├── Korasaju.cpp
-│   │   ├── Kruskal.java
-│   │   ├── Reader.java
-│   │   ├── TWO_SAT.cpp
-│   │   └── khan.java
-│   │
+│   ├── Basics/
+│   ├── Graphs/
 │   ├── Math/
-│   │   └── MathUtils.java
-│   │
-│   ├── ProgramacaoDinamica/
-│   │   ├── ArrayDescription.cpp
-│   │   ├── BookShop.cpp
-│   │   ├── CoinsCombinations2.cpp
-│   │   ├── CountingTowers.cpp
-│   │   ├── EditDistance.cpp
-│   │   ├── LongestCommomSubsequence.cpp
-│   │   ├── MinimalGridPath.cpp
-│   │   ├── MinimizingCoins.cpp
-│   │   ├── RemovalGames.cpp
-│   │   └── template.cpp
-│   │
+│   ├── DynamicProgramming/
 │   ├── RangeQuery/
-│   │   ├── BinaryIndexedTree.java
-│   │   ├── LazySegTree.java
-│   │   └── RangeMinimum.java
-│   │
 │   ├── SlidingWindow/
-│   │   ├── Generic.java
-│   │   └── Minimum.java
 │   └── ...
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
-## Conteúdo por categoria
+## Content by category
 
-### Básicos
-Arquivos para operações simples e fundamentos de algoritmos, como:
+### Basics
+Files with fundamentals and simple operations, such as:
 
-- análise de tempo;
-- contagem de ocorrências;
-- transposição de matrizes;
-- dois somas;
-- exclusão de elementos duplicados.
+- counting occurrences;
+- matrix manipulation;
+- array analysis;
+- introductory examples.
 
-### Grafos
-Implementações de algoritmos clássicos para grafos, incluindo:
+### Graphs
+Implementations of classic graph algorithms, including:
 
-- BFS e DFS;
+- BFS;
+- DFS;
 - Dijkstra;
 - Bellman-Ford;
 - Kruskal;
 - Binary Lifting;
-- Ordenação topológica (Kahn);
+- topological sorting (Kahn);
 - SCC (Kosaraju);
-- Fluxo máximo (Edmonds-Karp);
+- maximum flow (Edmonds-Karp);
 - Union-Find;
 - Eulerian path (Hierholzer);
 - 2-SAT.
 
-### Programação dinâmica
-Soluções para problemas de DP, como:
+### Dynamic Programming
+Solutions for optimization and recurrence problems, such as:
 
-- Edits distance;
+- Edit Distance;
 - Longest Common Subsequence;
 - Minimizing Coins;
 - Counting Towers;
@@ -112,56 +73,60 @@ Soluções para problemas de DP, como:
 - Minimal Grid Path.
 
 ### Range Query
-Estruturas para consultas em intervalos:
+Data structures for interval queries:
 
 - Fenwick Tree (Binary Indexed Tree);
-- Segment Tree com lazy propagation;
+- Segment Tree with lazy propagation;
 - Range minimum query.
 
 ### Sliding Window
-Implementações de janelas deslizantes para resolução eficiente de problemas de subarray:
-
-- mínimo em janela;
-- forma genérica para problemas desse tipo.
+Implementations of sliding-window techniques for efficient subarray solutions.
 
 ### Math
-Utilitários matemáticos para suporte em operações e manipulação numérica.
+Mathematical utilities and helper functions for numerical manipulation.
 
-## Linguagens
+## Main language
 
-O repositório contém exemplos em:
+The repository is primarily developed in C++.
 
-- C++
-- Java
+## Requirements
 
-## Como usar
+- a C++ compiler (g++ or clang++);
+- C++11 or newer support;
+- optionally, a `make` environment.
 
-### C++
+## How to compile
+
+Basic example to compile a C++ file:
+
 ```bash
-g++ src/Grafos/BFS.cpp -o bfs
+g++ -std=c++17 -O2 -Wall -Wextra -o program file.cpp
+./program
+```
+
+Example for compiling a graph file:
+
+```bash
+g++ -std=c++17 -O2 -Wall -Wextra src/Graphs/BFS.cpp -o bfs
 ./bfs
 ```
 
-### Java
-```bash
-javac src/RangeQuery/BinaryIndexedTree.java
-java BinaryIndexedTree
-```
+## How to use
 
-> Os comandos podem variar conforme a classe ou arquivo selecionado. Em alguns casos, a estrutura do programa pode exigir adaptação do ponto de entrada.
+Each file can be compiled individually depending on the specific problem or algorithm. In many cases, the code is organized to make reading and reuse easier in other projects.
 
-## Objetivo
+## Goal
 
-Este notebook foi montado para servir como base de estudo e consulta rápida, especialmente em problemas de algoritmos e estruturas de dados, com foco em soluções bem organizadas e reutilizáveis.
+This notebook was created to serve as a quick study and reference base for algorithms, data structures, and techniques commonly used in competitive programming.
 
-## Contribuição
+## Contribution
 
-Contribuições são bem-vindas. Se você quiser adicionar novos algoritmos, melhorar documentação ou padronizar implementações, sinta-se à vontade para abrir um pull request.
+Contributions are welcome. If you want to add new algorithms, improve documentation, or adjust implementations, feel free to open a pull request or suggest improvements.
 
-## Equipe
+## Team
 
 - UALGException
 
-## Licença
+## License
 
-Confira a licença do repositório para mais detalhes.
+Please check the `LICENSE` file in the repository for more details.
