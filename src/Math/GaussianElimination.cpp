@@ -1,9 +1,9 @@
-/* ==============================================================================
- * Algoritmo: Eliminação de Gauss
- * Descrição: Resolve sistemas de equações lineares.
- * Retorna: 1 (Solução Única), 0 (Sem Solução), 2 (Infinitas Soluções).
- * O array 'ans' é preenchido com os valores das variáveis.
- * ==============================================================================
+/* =============================================================================
+ * Algoritmo: Eliminacao de Gauss
+ * Descricao: Resolve sistemas de equacoes lineares.
+ * Retorna: 1 (Solucao Unica), 0 (Sem Solucao), 2 (Infinitas Solucoes).
+ * O array 'ans' e preenchido com os valores das variaveis.
+ * =============================================================================
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -42,11 +42,11 @@ int gauss(vector<vector<double>> a, vector<double>& ans) {
     for (int i = 0; i < n; ++i) {
         double sum = 0;
         for (int j = 0; j < m; ++j) sum += ans[j] * a[i][j];
-        if (abs(sum - a[i][m]) > EPS) return 0;  // 0 soluções
+        if (abs(sum - a[i][m]) > EPS) return 0;  // 0 solucoes
     }
 
     for (int i = 0; i < m; ++i) {
-        if (where[i] == -1) return 2;  // Infinitas soluções
+        if (where[i] == -1) return 2;  // Infinitas solucoes
     }
-    return 1;  // 1 solução
+    return 1;  // 1 solucao
 }

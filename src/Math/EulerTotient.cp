@@ -1,11 +1,11 @@
-/* ==============================================================================
- * Algoritmo: Função Totiente de Euler (Phi - φ)
- * Descrição: Conta o número de inteiros <= N que são coprimos com N.
- * ============================================================================== */
+/* =============================================================================
+ * Algoritmo: Funcao Totiente de Euler (Phi - φ)
+ * Descricao: Conta o numero de inteiros <= N que sao coprimos com N.
+ * ============================================================================= */
 #include <bits/stdc++.h>
 using namespace std;
 
-// 1. Calcula phi(N) para um único número em O(sqrt(N))
+// 1. Calcula phi(N) para um unico numero em O(sqrt(N))
 long long phi(long long n) {
     long long result = n;
     for (long long i = 2; i * i <= n; i++) {
@@ -18,7 +18,7 @@ long long phi(long long n) {
     return result;
 }
 
-// 2. Pré-computa phi(N) para todos os números até MAXN em O(N log log N)
+// 2. Pre-computa phi(N) para todos os numeros ate MAXN em O(N log log N)
 const int MAXN = 1e6 + 5;
 int phi_arr[MAXN];
 

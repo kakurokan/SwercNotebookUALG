@@ -1,10 +1,10 @@
-/* ==============================================================================
+/* =============================================================================
  * Algoritmo: Segment Tree (Range Minimum Query - RMQ)
- * Complexidade: Construção O(N). Update e Query O(log N). Memória O(4*N).
- * Descrição: Encontra o valor mínimo num intervalo [L, R] e atualiza
- * valores em índices específicos.
- * NOTA: O elemento neutro para queries de mínimo é o INF (infinito).
- * ==============================================================================
+ * Complexidade: Construcao O(N). Update e Query O(log N). Memoria O(4*N).
+ * Descricao: Encontra o valor minimo num intervalo [L, R] e atualiza
+ * valores em indices especificos.
+ * NOTA: O elemento neutro para queries de minimo e o INF (infinito).
+ * =============================================================================
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -12,7 +12,7 @@ using namespace std;
 struct MinSegTree {
     int n;
     vector<long long> tree;
-    const long long INF = 1e18;  // Elemento neutro para o mínimo
+    const long long INF = 1e18;  // Elemento neutro para o minimo
 
     MinSegTree(int n) {
         this->n = n;
@@ -46,7 +46,7 @@ struct MinSegTree {
         tree[node] = min(tree[node * 2], tree[node * 2 + 1]);
     }
 
-    // Retorna o mínimo no intervalo [ql, qr]
+    // Retorna o minimo no intervalo [ql, qr]
     long long query(int node, int left, int right, int ql, int qr) {
         // Intervalo totalmente fora da query
         if (left > qr || right < ql) return INF;
@@ -62,7 +62,7 @@ struct MinSegTree {
         return min(res_left, res_right);
     }
 
-    // Funções de interface limpas (0-indexed)
+    // Funcoes de interface limpas (0-indexed)
     void build(const vector<long long>& a) { build(a, 1, 0, n - 1); }
     void update(int idx, long long val) { update(1, 0, n - 1, idx, val); }
     long long query(int l, int r) { return query(1, 0, n - 1, l, r); }

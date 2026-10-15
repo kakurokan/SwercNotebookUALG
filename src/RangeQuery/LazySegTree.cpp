@@ -2,33 +2,33 @@
  * Segment Tree Recursiva com Lazy Propagation.
  * Ideal para: Range Updates (atualizar um intervalo inteiro) e Range Queries.
  * Complexidade: O(log N) para update e query.
- * Espaço: 4 * N.
+ * Espaco: 4 * N.
  */
 public static class LazySegTree {
     // 'tree': Armazena o valor agregado (soma, min, max) do intervalo.
-    // 'lazy': Armazena o valor de atualização pendente que AINDA NÃO foi repassado para os filhos.
+    // 'lazy': Armazena o valor de atualizacao pendente que AINDA NAO foi repassado para os filhos.
     long[] tree, lazy;
     int n;
 
     public LazySegTree(int n) {
         this.n = n;
-        // O tamanho 4*N é uma cota superior segura para uma árvore binária completa
+        // O tamanho 4*N e uma cota superior segura para uma arvore binaria completa
         // que cobre N elementos.
         tree = new long[4 * n];
         lazy = new long[4 * n];
     }
 
     /**
-     * A função PUSH (Propagate).
-     * Esta é a mágica da Lazy Propagation. Antes de descer para os filhos de um nó,
-     * verificamos se há alguma atualização pendente ("preguiçosa") neste nó.
-     * Se houver, nós a aplicamos aos filhos AGORA e limpamos a preguiça do pai.
+     * A funcao PUSH (Propagate).
+     * Esta e a magica da Lazy Propagation. Antes de descer para os filhos de um no,
+     * verificamos se ha alguma atualizacao pendente ("preguicosa") neste no.
+     * Se houver, nos a aplicamos aos filhos AGORA e limpamos a preguica do pai.
      */
     private void push(int node, int start, int end) {
-        // Se não houver nada pendente (0), não faz nada.
+        // Se nao houver nada pendente (0), nao faz nada.
         if (lazy[node] != 0) {
 
-            // Se não for um nó folha (tem filhos), propaga a informação.
+            // Se nao for um no folha (tem filhos), propaga a informacao.
             if (start != end) {
                 int mid = (start + end) / 2;
 
@@ -37,8 +37,8 @@ public static class LazySegTree {
                 lazy[2 * node] += lazy[node];
                 // 2. Atualiza o valor REAL (tree) do filho imediatamente, para que
                 //    futuras consultas nele estejam corretas sem precisar descer mais.
-                //    NOTA: Multiplicamos pelo tamanho do intervalo ((mid - start + 1)) porque é SOMA.
-                //          Se fosse MÍNIMO ou MÁXIMO, não multiplicaria, apenas somaria.
+                //    NOTA: Multiplicamos pelo tamanho do intervalo ((mid - start + 1)) porque e SOMA.
+                //          Se fosse MINIMO ou MAXIMO, nao multiplicaria, apenas somaria.
                 tree[2 * node] += lazy[node] * (mid - start + 1);
 
                 // --- Filho Direito (2*node + 1) ---
@@ -46,33 +46,33 @@ public static class LazySegTree {
                 tree[2 * node + 1] += lazy[node] * (end - mid);
             }
 
-            // Como já empurramos a atualização para baixo, limpamos a "preguiça" do nó atual.
+            // Como ja empurramos a atualizacao para baixo, limpamos a "preguica" do no atual.
             lazy[node] = 0;
         }
     }
 
-    // Função pública para chamar a atualização (interface amigável)
+    // Funcao publica para chamar a atualizacao (interface amigavel)
     // Adiciona 'val' a todos os elementos no intervalo [l, r]
     public void update(int l, int r, int val) {
         update(1, 0, n - 1, l, r, val);
     }
 
-    // Função interna recursiva de atualização
-    // node: índice atual na árvore | start, end: intervalo que este nó cobre
+    // Funcao interna recursiva de atualizacao
+    // node: indice atual na arvore | start, end: intervalo que este no cobre
     // l, r: intervalo que queremos atualizar | val: valor a adicionar
     private void update(int node, int start, int end, int l, int r, int val) {
-        // Caso 1: O intervalo do nó atual está totalmente FORA do intervalo de atualização.
+        // Caso 1: O intervalo do no atual esta totalmente FORA do intervalo de atualizacao.
         if (l > end || r < start) return;
 
-        // Caso 2: O intervalo do nó atual está TOTALMENTE DENTRO do intervalo de atualização.
-        // Aqui acontece a otimização: Atualizamos este nó e marcamos o 'lazy' para não descer mais.
+        // Caso 2: O intervalo do no atual esta TOTALMENTE DENTRO do intervalo de atualizacao.
+        // Aqui acontece a otimizacao: Atualizamos este no e marcamos o 'lazy' para nao descer mais.
         if (l <= start && end <= r) {
-            lazy[node] += val; // Acumula a preguiça
-            tree[node] += (long) val * (end - start + 1); // Atualiza o valor deste nó
-            return; // RETORNA IMEDIATAMENTE! Não desce para os filhos (O(log N)).
+            lazy[node] += val; // Acumula a preguica
+            tree[node] += (long) val * (end - start + 1); // Atualiza o valor deste no
+            return; // RETORNA IMEDIATAMENTE! Nao desce para os filhos (O(log N)).
         }
 
-        // Caso 3: Interseção parcial. Precisamos descer.
+        // Caso 3: Intersecao parcial. Precisamos descer.
         // Antes de descer, TEMOS que empurrar qualquer sujeira antiga (push).
         push(node, start, end);
 
@@ -81,12 +81,12 @@ public static class LazySegTree {
         update(2 * node, start, mid, l, r, val);
         update(2 * node + 1, mid + 1, end, l, r, val);
 
-        // Na volta da recursão (backtracking), atualizamos o valor do nó atual
+        // Na volta da recursao (backtracking), atualizamos o valor do no atual
         // baseando-se nos valores atualizados dos filhos (Pull/Merge).
         tree[node] = tree[2 * node] + tree[2 * node + 1];
     }
 
-    // Função pública para consulta
+    // Funcao publica para consulta
     public long query(int l, int r) {
         return query(1, 0, n - 1, l, r);
     }
@@ -96,11 +96,11 @@ public static class LazySegTree {
         if (l > end || r < start) return 0;
 
         // Caso 2: Totalmente dentro. Retorna o valor armazenado.
-        // Graças ao 'push' e 'update' corretos, este valor já considera todas as atualizações
-        // relevantes ou tem um 'lazy' pendente que já foi contabilizado no 'tree[node]'.
+        // Gracas ao 'push' e 'update' corretos, este valor ja considera todas as atualizacoes
+        // relevantes ou tem um 'lazy' pendente que ja foi contabilizado no 'tree[node]'.
         if (l <= start && end <= r) return tree[node];
 
-        // Caso 3: Parcial. Empurra pendências antes de consultar os filhos.
+        // Caso 3: Parcial. Empurra pendencias antes de consultar os filhos.
         push(node, start, end);
 
         int mid = (start + end) / 2;

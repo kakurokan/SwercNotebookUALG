@@ -1,9 +1,9 @@
-/* ==============================================================================
+/* =============================================================================
  * Problema: Longest Common Subsequence
- * Algoritmo: DP 2D Clássico + Backtracking
- * Descrição: Encontra a maior subsequência comum entre dois vetores e imprime
- * o comprimento e os elementos dessa subsequência, reconstituindo o caminho.
- * ==============================================================================
+ * Algoritmo: DP 2D Classico + Backtracking
+ * Descricao: Encontra a maior subsequencia comum entre dois vetores e imprime
+ * o comprimento e os elementos dessa subsequencia, reconstituindo o caminho.
+ * =============================================================================
  */
 void solve(vi base, vi target) {
     int n = base.size(), m = target.size();
@@ -20,7 +20,7 @@ void solve(vi base, vi target) {
         }
     }
 
-    // 2. Reconstruir a Subsequência (Backtracking do fim para o início)
+    // 2. Reconstruir a Subsecuencia (Backtracking do fim para o inicio)
     vi result;
     int i = n, j = m;
     while (i > 0 && j > 0) {
@@ -29,16 +29,16 @@ void solve(vi base, vi target) {
             i--;
             j--;
         }
-        // Desloca para a direção de onde veio o valor máximo
+        // Desloca para a direcao de onde veio o valor maximo
         else if (memo[i - 1][j] > memo[i][j - 1]) {
-            i--;  // O valor ótimo veio de cima
+            i--;  // O valor otimo veio de cima
         } else {
-            j--;  // O valor ótimo veio da esquerda
+            j--;  // O valor otimo veio da esquerda
         }
     }
 
     cout << result.size() << '\n';
-    // A resposta é recolhida de trás para a frente
+    // A resposta e recolhida de tras para a frente
     for (int k = result.size() - 1; k >= 0; k--) {
         cout << result[k] << (k == 0 ? "\n" : " ");
     }
