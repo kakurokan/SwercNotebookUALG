@@ -1,19 +1,20 @@
 # SwercNotebookUALG
 
-Notebook da equipe UALGException, reunindo implementações de algoritmos, estruturas de dados e técnicas frequentes em programação competitiva e resolução de problemas.
+Notebook da equipe UALGException.
+
+Este repositório reúne exemplos, algoritmos e estruturas de dados em C++ para estudo, consulta rápida e utilização em competições e desafios de programação.
 
 ## Sobre o projeto
 
-Este repositório serve como uma coleção de referências rápidas para:
+O objetivo do projeto é centralizar implementações clássicas e úteis de:
 
-- algoritmos de grafos;
-- estruturas de dados clássicas;
+- grafos;
 - programação dinâmica;
-- técnicas de sliding window e range query;
-- utilitários matemáticos;
-- soluções básicas em Java e C++.
-
-O objetivo é centralizar exemplos prontos para consulta, estudo e reutilização durante competições e desafios de algoritmos.
+- estruturas de dados;
+- consultas em intervalos;
+- janelas deslizantes;
+- matemática e utilitários;
+- técnicas comuns em programação competitiva.
 
 ## Estrutura do repositório
 
@@ -23,87 +24,47 @@ O objetivo é centralizar exemplos prontos para consulta, estudo e reutilizaçã
 │   └── c_cpp_properties.json
 ├── src/
 │   ├── Básicos/
-│   │   ├── CheckTimes.java
-│   │   ├── Occorrences.java
-│   │   ├── TransporMatriz.java
-│   │   ├── TwoSum.java
-│   │   └── Unique.java
-│   │
 │   ├── Grafos/
-│   │   ├── BFS.cpp
-│   │   ├── Bellman_Ford.cpp
-│   │   ├── BinaryLifting.cpp
-│   │   ├── DFS.cpp
-│   │   ├── DFS_ciclos.cpp
-│   │   ├── Dijkstra.cpp
-│   │   ├── Disjointset.cpp
-│   │   ├── Edmonds-Karp.cpp
-│   │   ├── Floyd-Warshall.java
-│   │   ├── Hierholzer.java
-│   │   ├── Korasaju.cpp
-│   │   ├── Kruskal.java
-│   │   ├── Reader.java
-│   │   ├── TWO_SAT.cpp
-│   │   └── khan.java
-│   │
 │   ├── Math/
-│   │   └── MathUtils.java
-│   │
 │   ├── ProgramacaoDinamica/
-│   │   ├── ArrayDescription.cpp
-│   │   ├── BookShop.cpp
-│   │   ├── CoinsCombinations2.cpp
-│   │   ├── CountingTowers.cpp
-│   │   ├── EditDistance.cpp
-│   │   ├── LongestCommomSubsequence.cpp
-│   │   ├── MinimalGridPath.cpp
-│   │   ├── MinimizingCoins.cpp
-│   │   ├── RemovalGames.cpp
-│   │   └── template.cpp
-│   │
 │   ├── RangeQuery/
-│   │   ├── BinaryIndexedTree.java
-│   │   ├── LazySegTree.java
-│   │   └── RangeMinimum.java
-│   │
 │   ├── SlidingWindow/
-│   │   ├── Generic.java
-│   │   └── Minimum.java
 │   └── ...
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 ## Conteúdo por categoria
 
 ### Básicos
-Arquivos para operações simples e fundamentos de algoritmos, como:
+Arquivos com fundamentos e operações simples, como:
 
-- análise de tempo;
 - contagem de ocorrências;
-- transposição de matrizes;
-- dois somas;
-- exclusão de elementos duplicados.
+- manipulação de matrizes;
+- busca e análise de arrays;
+- exemplos introdutórios.
 
 ### Grafos
-Implementações de algoritmos clássicos para grafos, incluindo:
+Implementações de algoritmos clássicos, incluindo:
 
-- BFS e DFS;
+- BFS;
+- DFS;
 - Dijkstra;
 - Bellman-Ford;
 - Kruskal;
 - Binary Lifting;
-- Ordenação topológica (Kahn);
+- ordenação topológica (Kahn);
 - SCC (Kosaraju);
-- Fluxo máximo (Edmonds-Karp);
+- fluxo máximo (Edmonds-Karp);
 - Union-Find;
 - Eulerian path (Hierholzer);
 - 2-SAT.
 
 ### Programação dinâmica
-Soluções para problemas de DP, como:
+Soluções para problemas de otimização e recorrência, como:
 
-- Edits distance;
+- Edit Distance;
 - Longest Common Subsequence;
 - Minimizing Coins;
 - Counting Towers;
@@ -112,51 +73,55 @@ Soluções para problemas de DP, como:
 - Minimal Grid Path.
 
 ### Range Query
-Estruturas para consultas em intervalos:
+Estruturas de dados para consultas em intervalos:
 
 - Fenwick Tree (Binary Indexed Tree);
 - Segment Tree com lazy propagation;
 - Range minimum query.
 
 ### Sliding Window
-Implementações de janelas deslizantes para resolução eficiente de problemas de subarray:
-
-- mínimo em janela;
-- forma genérica para problemas desse tipo.
+Implementações de janelas deslizantes para soluções eficientes em subarrays.
 
 ### Math
-Utilitários matemáticos para suporte em operações e manipulação numérica.
+Utilitários matemáticos e funções de apoio para manipulação numérica.
 
-## Linguagens
+## Linguagem principal
 
-O repositório contém exemplos em:
+O repositório é majoritariamente desenvolvido em C++.
 
-- C++
-- Java
+## Requisitos
 
-## Como usar
+- compilador C++ (g++ ou clang++);
+- suporte a C++11 ou superior;
+- opcionalmente, um ambiente com `make`.
 
-### C++
+## Como compilar
+
+Exemplo básico para compilar um arquivo C++:
+
 ```bash
-g++ src/Grafos/BFS.cpp -o bfs
+g++ -std=c++17 -O2 -Wall -Wextra -o programa arquivo.cpp
+./programa
+```
+
+Exemplo para compilar um arquivo de grafos:
+
+```bash
+g++ -std=c++17 -O2 -Wall -Wextra src/Grafos/BFS.cpp -o bfs
 ./bfs
 ```
 
-### Java
-```bash
-javac src/RangeQuery/BinaryIndexedTree.java
-java BinaryIndexedTree
-```
+## Como usar
 
-> Os comandos podem variar conforme a classe ou arquivo selecionado. Em alguns casos, a estrutura do programa pode exigir adaptação do ponto de entrada.
+Cada arquivo pode ser compilado isoladamente conforme a necessidade do problema ou algoritmo. Em muitos casos, o código foi organizado para facilitar leitura e reutilização em outros projetos.
 
 ## Objetivo
 
-Este notebook foi montado para servir como base de estudo e consulta rápida, especialmente em problemas de algoritmos e estruturas de dados, com foco em soluções bem organizadas e reutilizáveis.
+Este notebook foi montado para servir como base de estudo e consulta rápida em algoritmos, estruturas de dados e técnicas frequentemente usadas em programação competitiva.
 
 ## Contribuição
 
-Contribuições são bem-vindas. Se você quiser adicionar novos algoritmos, melhorar documentação ou padronizar implementações, sinta-se à vontade para abrir um pull request.
+Contribuições são bem-vindas. Se você quiser adicionar novos algoritmos, melhorar a documentação ou ajustar implementações, sinta-se à vontade para abrir um pull request ou sugerir melhorias.
 
 ## Equipe
 
@@ -164,4 +129,4 @@ Contribuições são bem-vindas. Se você quiser adicionar novos algoritmos, mel
 
 ## Licença
 
-Confira a licença do repositório para mais detalhes.
+Consulte o arquivo `LICENSE` no repositório para mais detalhes.
