@@ -1,10 +1,10 @@
-/* ==============================================================================
+/* 
  * Problema: Removal Game
  * Algoritmo: Range DP (DP em Intervalos)
  * Descrição: Dois jogadores apanham itens extremos do array alternadamente.
  * Maximizar a pontuação do primeiro jogador.
  * Percorre os intervalos (gaps) por ordem crescente de comprimento.
- * ==============================================================================
+ * 
  */
 ll solve(int listSize, vi list) {
     int n = listSize;
