@@ -1,9 +1,8 @@
-/* ==============================================================================
+/* 
  * Problema: Counting Towers
  * Algoritmo: State Machine DP
  * Descrição: Número de formas de construir uma torre 2 x N.
  * Estados: 0 = blocos superiores separados; 1 = bloco superior único (unido).
- * ==============================================================================
  */
 ll memo[1000000 + 1][2];
 

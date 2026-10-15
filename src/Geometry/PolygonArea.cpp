@@ -1,9 +1,8 @@
-/* ==============================================================================
+/* 
  * Área de Polígono (Shoelace Formula)
  * Os pontos devem estar ordenados (horário ou anti-horário).
  * Retorna o dobro da área (para manter sempre em inteiros).
  * Se precisarem da área real, dividam por 2.0 no fim.
- * ==============================================================================
  */
 long long polygon_area_x2(const vector<Point>& poly) {
     long long area = 0;

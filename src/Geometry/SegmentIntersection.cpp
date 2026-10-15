@@ -1,7 +1,6 @@
-/* ==============================================================================
+/* 
  * Intersecção de Segmentos (Simples)
- * Verifica se os segmentos AB e CD se cruzam (exclui casos de colinearidade).
- * ==============================================================================
+ * Verifica se os segmentos AB e CD se cruzam (exclui casos de colinearidade)
  */
 bool segments_intersect(Point a, Point b, Point c, Point d) {
     int o1 = orientation(a, b, c);

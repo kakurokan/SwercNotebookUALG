@@ -1,9 +1,8 @@
-/* ==============================================================================
+/* 
  * Algoritmo: KMP (Prefix Function / Pi Array)
  * Complexidade: O(N)
  * Descrição: Encontra ocorrências de um padrão num texto em tempo linear.
  * Para usar em pattern matching, basta processar a string s = "padrao#texto".
- * ==============================================================================
  */
 #include <bits/stdc++.h>
 using namespace std;

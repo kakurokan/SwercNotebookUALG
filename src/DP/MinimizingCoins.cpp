@@ -3,7 +3,6 @@
  * Algoritmo: Unbounded Knapsack (Minimização)
  * Descrição: Encontrar o número mínimo de moedas para atingir um valor alvo.
  * Moedas podem ser usadas infinitas vezes.
- * 
  */
 int solve(int target, vi coins) {
     // Inicializar com INF, pois queremos o mínimo

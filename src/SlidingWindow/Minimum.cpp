@@ -1,9 +1,9 @@
-/* ==============================================================================
+/* 
  * Problema Típico: Sliding Window Minimum / Maximum
  * Algoritmo: Monotonic Queue (Fila Monotónica) usando std::deque
  * Descrição: Encontra o mínimo (ou máximo) em todas as janelas de tamanho K.
  * Complexidade: O(N) Tempo | O(K) Memória
- * ============================================================================== */
+ */
 #include <bits/stdc++.h>
 using namespace std;
 

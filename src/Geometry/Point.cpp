@@ -1,7 +1,6 @@
-/* ==============================================================================
+/* 
  * Base de Geometria: Struct Point
  * Operações usam 'long long' para evitar overflow em multiplicações.
- * ==============================================================================
  */
 struct Point {
     long long x, y;

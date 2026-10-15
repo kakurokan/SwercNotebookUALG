@@ -1,8 +1,7 @@
-/* =============================================================================
+/* 
  * Algoritmo: Teorema de Sprague-Grundy (Funcao MEX)
  * Descricao: Calcula o valor de Grundy para um jogo imparcial qualquer.
  * MEX (Minimum Excluded) e o menor inteiro nao negativo ausente num conjunto.
- * =============================================================================
  */
 // Funcao para encontrar o MEX de um conjunto de valores (estados seguintes)
 int mex(const vector<int>& next_states_grundy_values) {

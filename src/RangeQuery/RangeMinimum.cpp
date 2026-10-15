@@ -1,10 +1,9 @@
-/* =============================================================================
+/* 
  * Algoritmo: Segment Tree (Range Minimum Query - RMQ)
  * Complexidade: Construcao O(N). Update e Query O(log N). Memoria O(4*N).
  * Descricao: Encontra o valor minimo num intervalo [L, R] e atualiza
  * valores em indices especificos.
  * NOTA: O elemento neutro para queries de minimo e o INF (infinito).
- * =============================================================================
  */
 #include <bits/stdc++.h>
 using namespace std;

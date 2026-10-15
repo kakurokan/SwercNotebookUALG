@@ -1,9 +1,8 @@
-/* =============================================================================
+/* 
  * Problema: Array Description
  * Algoritmo: DP Local (Adjacencia)
  * Descricao: Modificar um array preenchendo zeros, sendo que valores
  * adjacentes podem diferir no maximo em 1. Conta todas as combinacoes validas.
- * =============================================================================
  */
 int solve(int arraySize, int upperBound, int array[]) {
     // memo[i][k] = n de formas de criar prefixo i terminado no valor k

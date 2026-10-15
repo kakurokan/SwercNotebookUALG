@@ -3,7 +3,6 @@
  * Algoritmo: DP 2D Baseado em Strings
  * Descrição: Número mínimo de inserções, remoções e substituições para
  * transformar a string base na target.
- * 
  */
 int solve() {
     string base, target;

@@ -1,9 +1,8 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Segment Tree com Lazy Propagation (Soma em Intervalo)
  * Complexidade: O(log N) para updates e queries. Memória O(4*N).
  * Descrição: Resolve atualizações e consultas em ranges (ex: [L, R]).
  * Para mudar para Máximo/Mínimo: alterar as funções de merge no update/query.
- * ==============================================================================
  */
 struct LazySegTree {
     int n;

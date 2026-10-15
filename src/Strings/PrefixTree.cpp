@@ -1,9 +1,8 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Trie (Prefix Tree) baseada em vetor estático
  * Complexidade: O(L) por inserção/pesquisa (L = tamanho da palavra)
  * Descrição: Evita a sobrecarga de alocação dinâmica. Facilmente adaptável
  * para uma Xor-Trie em problemas matemáticos manipulando bits (0 e 1).
- * ==============================================================================
  */
 #include <bits/stdc++.h>
 using namespace std;

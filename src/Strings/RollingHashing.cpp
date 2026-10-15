@@ -1,8 +1,7 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Rolling Hash com Duplo Hash (Rabin-Karp)
  * Complexidade: Pré-computação O(N), Queries de Substring O(1)
  * Descrição: Transforma substrings em inteiros para comparações diretas.
- * ==============================================================================
  */
 #include <bits/stdc++.h>
 using namespace std;

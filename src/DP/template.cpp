@@ -1,8 +1,3 @@
-/* ==============================================================================
- * Template: Estrutura Base para Competições
- * Descrição: Otimização de I/O, macros essenciais e constantes comuns.
- * ==============================================================================
- */
 #include <bits/stdc++.h>
 using namespace std;
 

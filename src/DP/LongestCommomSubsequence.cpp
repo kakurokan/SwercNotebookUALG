@@ -3,7 +3,6 @@
  * Algoritmo: DP 2D Classico + Backtracking
  * Descricao: Encontra a maior subsequencia comum entre dois vetores e imprime
  * o comprimento e os elementos dessa subsequencia, reconstituindo o caminho.
- * 
  */
 void solve(vi base, vi target) {
     int n = base.size(), m = target.size();

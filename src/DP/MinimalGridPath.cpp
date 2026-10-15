@@ -4,7 +4,6 @@
  * Descrição: Encontra o caminho lexicograficamente menor (formando uma string)
  * numa grelha N x N. Usa BFS síncrona para manter apenas as melhores opções por
  * nível.
- * 
  */
 string solve(vector<string> grid) {
     int n = grid.size();

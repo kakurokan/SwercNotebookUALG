@@ -1,10 +1,9 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Z-Algorithm
  * Complexidade: O(N)
  * Descrição: z[i] é o tamanho do maior prefixo comum entre s[0...N-1] e
  * s[i...N-1]. A otimização baseia-se em manter um intervalo de correspondência
  * [l, r].
- * ==============================================================================
  */
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,7 +1,6 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Teoria de Jogos (Nim e Sprague-Grundy)
  * Descrição: Avaliação de estados vencedores em jogos imparciais.
- * ==============================================================================
  */
 #include <bits/stdc++.h>
 using namespace std;

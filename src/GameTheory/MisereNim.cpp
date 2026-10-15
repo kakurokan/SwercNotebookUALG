@@ -1,8 +1,7 @@
-/* =============================================================================
+/* 
  * Variante: Misere Nim
  * Descricao: Jogo do Nim normal, mas o ULTIMO jogador a fazer um movimento
  * PERDE.
- * =============================================================================
  */
 bool misere_nim_winner(const vector<int>& piles) {
     int xor_sum = 0;

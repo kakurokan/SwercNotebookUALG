@@ -1,10 +1,10 @@
-/* =============================================================================
+/* 
  * Problema Tipico: Maior Subarray com Restricao (Ex: Soma <= Target)
  * Algoritmo: Dois Ponteiros / Janela Variavel (Sliding Window)
  * Descricao: O ponteiro 'right' avanca sempre. O 'left' avanca apenas para 
  * corrigir a janela quando esta se torna invalida.
  * Complexidade: O(N) Tempo (os ponteiros so andam para a frente)
- * ============================================================================= */
+ */
 #include <bits/stdc++.h>
 using namespace std;
 
