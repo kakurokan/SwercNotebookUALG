@@ -1,8 +1,7 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Binary Search on Answer
  * Descrição: Encontra o primeiro valor no intervalo [low, high] que satisfaz
  * a função check(). Estrutura imune a off-by-one errors.
- * ==============================================================================
  */
 bool check(long long mid) {
     // Implementar a lógica de validação do problema para o valor 'mid'

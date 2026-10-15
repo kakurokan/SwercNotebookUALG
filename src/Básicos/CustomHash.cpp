@@ -1,8 +1,7 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Custom Hash para Unordered Map
  * Descrição: Previne testes anti-hash que causam TLE em competições.
  * Uso: unordered_map<long long, int, custom_hash> safe_map;
- * ==============================================================================
  */
 #include <chrono>
 struct custom_hash {

@@ -1,9 +1,8 @@
-/* ==============================================================================
+/* 
  * Problema: Book Shop
  * Algoritmo: Mochila 0/1 (0/1 Knapsack)
  * Descrição: Dado um array de preços e outro de páginas, encontrar o máximo
  * de páginas possível comprar sem exceder um preço máximo.
- * ==============================================================================
  */
 int solve(vi pages, vi prices, int maxTotalPrice) {
     int n = pages.size();

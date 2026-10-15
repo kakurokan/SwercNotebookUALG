@@ -1,7 +1,6 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Coordinate Compression
  * Descrição: Mapeia valores esparsos [10, 10^9, 50, ...] para [0, 2, 1, ...].
- * ==============================================================================
  */
 void coordinate_compression(vector<long long>& a) {
     vector<long long> sorted_a = a;

@@ -1,10 +1,10 @@
-/* ==============================================================================
+/* 
  * Algoritmo: Ordered Set (PBDS)
  * Descrição: Um std::set com superpoderes. 
  * Funcionalidades extra em O(log N):
  *  - find_by_order(k): retorna um iterador para o k-ésimo menor elemento (0-indexed)
  *  - order_of_key(k): retorna o número de elementos estritamente menores que k
- * ============================================================================== */
+ */
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
