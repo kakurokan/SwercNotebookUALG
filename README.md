@@ -1,32 +1,32 @@
 # SwercNotebookUALG
 
-Notebook da equipe UALGException.
+Notebook of the UALGException team.
 
-Este repositório reúne exemplos, algoritmos e estruturas de dados em C++ para estudo, consulta rápida e utilização em competições e desafios de programação.
+This repository contains examples, algorithms, and data structures in C++ for studying, quick consultation, and use in programming contests and algorithm challenges.
 
-## Sobre o projeto
+## About the project
 
-O objetivo do projeto é centralizar implementações clássicas e úteis de:
+The goal of this project is to centralize useful and classic implementations of:
 
-- grafos;
-- programação dinâmica;
-- estruturas de dados;
-- consultas em intervalos;
-- janelas deslizantes;
-- matemática e utilitários;
-- técnicas comuns em programação competitiva.
+- graphs;
+- dynamic programming;
+- data structures;
+- range queries;
+- sliding window techniques;
+- mathematics and utilities;
+- common competitive programming strategies.
 
-## Estrutura do repositório
+## Repository structure
 
 ```text
 .
 ├── .vscode/
 │   └── c_cpp_properties.json
 ├── src/
-│   ├── Básicos/
-│   ├── Grafos/
+│   ├── Basics/
+│   ├── Graphs/
 │   ├── Math/
-│   ├── ProgramacaoDinamica/
+│   ├── DynamicProgramming/
 │   ├── RangeQuery/
 │   ├── SlidingWindow/
 │   └── ...
@@ -35,18 +35,18 @@ O objetivo do projeto é centralizar implementações clássicas e úteis de:
 └── .gitignore
 ```
 
-## Conteúdo por categoria
+## Content by category
 
-### Básicos
-Arquivos com fundamentos e operações simples, como:
+### Basics
+Files with fundamentals and simple operations, such as:
 
-- contagem de ocorrências;
-- manipulação de matrizes;
-- busca e análise de arrays;
-- exemplos introdutórios.
+- counting occurrences;
+- matrix manipulation;
+- array analysis;
+- introductory examples.
 
-### Grafos
-Implementações de algoritmos clássicos, incluindo:
+### Graphs
+Implementations of classic graph algorithms, including:
 
 - BFS;
 - DFS;
@@ -54,15 +54,15 @@ Implementações de algoritmos clássicos, incluindo:
 - Bellman-Ford;
 - Kruskal;
 - Binary Lifting;
-- ordenação topológica (Kahn);
+- topological sorting (Kahn);
 - SCC (Kosaraju);
-- fluxo máximo (Edmonds-Karp);
+- maximum flow (Edmonds-Karp);
 - Union-Find;
 - Eulerian path (Hierholzer);
 - 2-SAT.
 
-### Programação dinâmica
-Soluções para problemas de otimização e recorrência, como:
+### Dynamic Programming
+Solutions for optimization and recurrence problems, such as:
 
 - Edit Distance;
 - Longest Common Subsequence;
@@ -73,60 +73,60 @@ Soluções para problemas de otimização e recorrência, como:
 - Minimal Grid Path.
 
 ### Range Query
-Estruturas de dados para consultas em intervalos:
+Data structures for interval queries:
 
 - Fenwick Tree (Binary Indexed Tree);
-- Segment Tree com lazy propagation;
+- Segment Tree with lazy propagation;
 - Range minimum query.
 
 ### Sliding Window
-Implementações de janelas deslizantes para soluções eficientes em subarrays.
+Implementations of sliding-window techniques for efficient subarray solutions.
 
 ### Math
-Utilitários matemáticos e funções de apoio para manipulação numérica.
+Mathematical utilities and helper functions for numerical manipulation.
 
-## Linguagem principal
+## Main language
 
-O repositório é majoritariamente desenvolvido em C++.
+The repository is primarily developed in C++.
 
-## Requisitos
+## Requirements
 
-- compilador C++ (g++ ou clang++);
-- suporte a C++11 ou superior;
-- opcionalmente, um ambiente com `make`.
+- a C++ compiler (g++ or clang++);
+- C++11 or newer support;
+- optionally, a `make` environment.
 
-## Como compilar
+## How to compile
 
-Exemplo básico para compilar um arquivo C++:
+Basic example to compile a C++ file:
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra -o programa arquivo.cpp
-./programa
+g++ -std=c++17 -O2 -Wall -Wextra -o program file.cpp
+./program
 ```
 
-Exemplo para compilar um arquivo de grafos:
+Example for compiling a graph file:
 
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra src/Grafos/BFS.cpp -o bfs
+g++ -std=c++17 -O2 -Wall -Wextra src/Graphs/BFS.cpp -o bfs
 ./bfs
 ```
 
-## Como usar
+## How to use
 
-Cada arquivo pode ser compilado isoladamente conforme a necessidade do problema ou algoritmo. Em muitos casos, o código foi organizado para facilitar leitura e reutilização em outros projetos.
+Each file can be compiled individually depending on the specific problem or algorithm. In many cases, the code is organized to make reading and reuse easier in other projects.
 
-## Objetivo
+## Goal
 
-Este notebook foi montado para servir como base de estudo e consulta rápida em algoritmos, estruturas de dados e técnicas frequentemente usadas em programação competitiva.
+This notebook was created to serve as a quick study and reference base for algorithms, data structures, and techniques commonly used in competitive programming.
 
-## Contribuição
+## Contribution
 
-Contribuições são bem-vindas. Se você quiser adicionar novos algoritmos, melhorar a documentação ou ajustar implementações, sinta-se à vontade para abrir um pull request ou sugerir melhorias.
+Contributions are welcome. If you want to add new algorithms, improve documentation, or adjust implementations, feel free to open a pull request or suggest improvements.
 
-## Equipe
+## Team
 
 - UALGException
 
-## Licença
+## License
 
-Consulte o arquivo `LICENSE` no repositório para mais detalhes.
+Please check the `LICENSE` file in the repository for more details.
