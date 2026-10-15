@@ -1,8 +1,8 @@
 /* 
- * Algoritmo: Trie (Prefix Tree) baseada em vetor estático
- * Complexidade: O(L) por inserção/pesquisa (L = tamanho da palavra)
- * Descrição: Evita a sobrecarga de alocação dinâmica. Facilmente adaptável
- * para uma Xor-Trie em problemas matemáticos manipulando bits (0 e 1).
+ * Algoritmo: Trie (Prefix Tree) baseada em vetor estatico
+ * Complexidade: O(L) por insercao/pesquisa (L = tamanho da palavra)
+ * Descricao: Evita a sobrecarga de alocacao dinamica. Facilmente adaptavel
+ * para uma Xor-Trie em problemas matematicos manipulando bits (0 e 1).
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -16,15 +16,15 @@ struct TrieNode {
     }
 };
 
-vector<TrieNode> trie(1);  // O nó 0 é sempre a raiz
+vector<TrieNode> trie(1);  // O no 0 e sempre a raiz
 
 void insert_string(const string& s) {
     int node = 0;
     for (char c : s) {
-        int idx = c - 'a';  // Assumindo apenas minúsculas
+        int idx = c - 'a';  // Assumindo apenas minusculas
         if (trie[node].next[idx] == -1) {
             trie[node].next[idx] = trie.size();
-            trie.emplace_back();  // Cria um novo nó
+            trie.emplace_back();  // Cria um novo no
         }
         node = trie[node].next[idx];
     }

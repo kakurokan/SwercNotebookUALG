@@ -1,11 +1,11 @@
 /* 
  * Algoritmo: 2D Prefix Sums
- * Descrição: Pre-computa a soma de qualquer submatriz em O(N*M).
- * A consulta de uma área (r1, c1) até (r2, c2) e feita em O(1).
+ * Descricao: Pre-computa a soma de qualquer submatriz em O(N*M).
+ * A consulta de uma area (r1, c1) ate (r2, c2) e feita em O(1).
  */
 void build_2d_prefix(const vector<vector<int>>& grid, vector<vector<long long>>& pref) {
     int R = grid.size(), C = grid[0].size();
-    // pref[i][j] guarda a soma de (0,0) até (i-1, j-1)
+    // pref[i][j] guarda a soma de (0,0) ate (i-1, j-1)
     for (int i = 1; i <= R; i++) {
         for (int j = 1; j <= C; j++) {
             pref[i][j] = grid[i-1][j-1] 
